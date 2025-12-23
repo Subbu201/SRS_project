@@ -1,24 +1,25 @@
+import { useParams, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { useParams, Link } from "react-router-dom";
 import { PatientContext } from "../context/PatientContext";
 
-export default function PatientDetails() {
+const PatientDetails = () => {
   const { id } = useParams();
   const { patients } = useContext(PatientContext);
+  const navigate = useNavigate();
 
-  const patient = patients.find((p) => p.id === id);
-
-  if (!patient) {
-    return <p>Patient not found</p>;
-  }
+  const patient = patients.find(p => p.id.toString() === id);
+  if (!patient) return <p>Patient not found</p>;
 
   return (
     <div>
-      <h3>{patient.name}</h3>
+      <p>{patient.name}</p>
       <p>Age: {patient.age}</p>
-      <p>Room Status: {patient.roomStatus}</p>
 
-      <Link to={`/room/${id}`}>Update Room Status</Link>
+      <button onClick={() => navigate(`/room/${patient.id}`)}>
+        Update Room Status
+      </button>
     </div>
   );
-}
+};
+
+export default PatientDetails;

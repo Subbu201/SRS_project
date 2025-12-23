@@ -5,7 +5,8 @@ import AddPatient from "./components/AddPatient";
 import PatientDetails from "./components/PatientDetails";
 import RoomStatus from "./components/RoomStatus";
 
-export default function App() {
+
+function App() {
   return (
     <>
       <Navbar />
@@ -18,3 +19,5 @@ export default function App() {
     </>
   );
 }
+
+export default App;

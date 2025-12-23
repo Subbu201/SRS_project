@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import  "../App.css";
 
-export default function Navbar() {
+const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
-    <nav>
-      <Link to="/">Patient List</Link>{" "}
-      <Link to="/add">Add Patient</Link>
+    <div id="bar">
+    <nav id="sp">
+      <button onClick={() => navigate("/")}>Patient List</button>
+      <button onClick={() => navigate("/add")}>Add Patient</button>
     </nav>
+    </div>
   );
-}
+};
+
+export default Navbar;
