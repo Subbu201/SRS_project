@@ -6,12 +6,12 @@ export const PatientProvider = ({ children }) => {
   const [patients, setPatients] = useState([]);
 
   const addPatient = (patient) => {
-    setPatients(prev => [...prev, patient]);
+    setPatients([...patients, patient]);
   };
 
   const updateRoomStatus = (id, status) => {
-    setPatients(prev =>
-      prev.map(p =>
+    setPatients(
+      patients.map((p) =>
         p.id === id ? { ...p, roomStatus: status } : p
       )
     );
@@ -23,5 +23,3 @@ export const PatientProvider = ({ children }) => {
     </PatientContext.Provider>
   );
 };
-
-export default PatientProvider;
