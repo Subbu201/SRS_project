@@ -1,12 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import PatientList from "./components/PatientList";
 import AddPatient from "./components/AddPatient";
 import PatientDetails from "./components/PatientDetails";
 import RoomStatus from "./components/RoomStatus";
 
-const App = () => {
+function App() {
   return (
     <>
       <Navbar />
@@ -18,6 +19,6 @@ const App = () => {
       </Routes>
     </>
   );
-};
+}
 
 export default App;

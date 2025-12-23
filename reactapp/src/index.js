@@ -1,14 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 import { PatientProvider } from "./context/PatientContext";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root"));
+
+root.render(
   <PatientProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </PatientProvider>,
-  document.getElementById("root")
+  </PatientProvider>
 );
