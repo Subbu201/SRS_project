@@ -1,0 +1,18 @@
+#link{
+  color:blue;
+  text-decoration:underline;
+  cursor:pointer
+}
+#bar{
+  background-color: green;
+  border: 2px none;
+  border-radius: 5px;
+  border-width:  10px;
+   padding:20px
+}
+body{
+  background-color:antiquewhite;
+}
+#sp{
+  padding: 20px;
+}
