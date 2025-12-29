@@ -1,0 +1,123 @@
+.reschedule-container {
+  max-width: 500px;
+  margin: 50px auto;
+  overflow-y: auto;
+  background: linear-gradient(145deg, #ecfce4, #f8bbd0);
+  padding: 30px 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.reschedule-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #d81b60;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.appointment-info {
+  background: rgba(216, 27, 96, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 4px solid #d81b60;
+}
+
+.appointment-info p {
+  margin: 8px 0;
+  color: #880e4f;
+  font-weight: 500;
+}
+
+.appointment-info label {
+  font-weight: bold;
+  color: #d81b60;
+}
+
+.reschedule-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reschedule-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #880e4f;
+  margin-top: 15px;
+}
+
+.reschedule-container label:first-of-type {
+  margin-top: 0;
+}
+
+.reschedule-container input,
+.reschedule-container select,
+.reschedule-container textarea {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #d81b60;
+  outline: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.reschedule-container input:focus,
+.reschedule-container select:focus,
+.reschedule-container textarea:focus {
+  border-color: #ad1457;
+  box-shadow: 0 0 12px rgba(173, 20, 87, 0.5);
+  background-color: #fff;
+}
+
+.reschedule-container input:disabled,
+.reschedule-container select:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  color: #999;
+  border-color: #ddd;
+}
+
+.reschedule-container button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #d81b60, #f06292);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.reschedule-container button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #f06292, #d81b60);
+  transform: scale(1.05);
+}
+
+.reschedule-container button:disabled {
+  background: linear-gradient(90deg, #ccc, #bbb);
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: scale(1);
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 13px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.error-message::before {
+  content: "⚠ ";
+}
